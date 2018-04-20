@@ -1,6 +1,6 @@
 public class GDC {
 
-    public static int getGDC(int[] given) {
+    public static int get(int[] given) {
         int smallest = getSmallest(given);
         for (int div = smallest; div >= 1; div--) {
             int i = 0;
