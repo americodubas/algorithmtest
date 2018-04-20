@@ -1,6 +1,6 @@
-public class Fibonacci {
+class Fibonacci {
 
-    public static long get(int n) {
+    static long get(int n) {
         if (n <= 2) {
             return 1;
         }
