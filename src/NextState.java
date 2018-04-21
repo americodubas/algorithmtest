@@ -17,7 +17,11 @@ class NextState {
 
     static int[] change(int[] given, int times) {
 
+        alreadyCalculated = new ArrayList<>();
+        foundSame = false;
+        i = 0;
         first = convertToString(given);
+
         alreadyCalculated.add(given);
 
         while (times > 0) {
