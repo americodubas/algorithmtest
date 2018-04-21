@@ -1,7 +1,11 @@
-class GDC {
+/**
+ * Calculate the greatest common divisor
+ */
+class GCD {
 
     static int get(int[] given) {
         int smallest = getSmallest(given);
+        //divide from the smallest given number till 1
         for (int div = smallest; div >= 1; div--) {
             int i = 0;
             for (; i < given.length; i++) {
@@ -9,6 +13,7 @@ class GDC {
                     break;
                 }
             }
+            //if given[i] was able to divide all numbers then it is the GCD
             if (i == given.length) {
                 return div;
             }
