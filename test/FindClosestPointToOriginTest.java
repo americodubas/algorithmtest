@@ -14,7 +14,7 @@ public class FindClosestPointToOriginTest {
     @Test
     public void calculateDistance() {
         assertEquals(5.66,
-                rounding(FindClosestPointToOrigin.calculateDistance(4, 4)),
+                rounding(Point.calculateDistance(4, 4)),
                 DELTA);
     }
 

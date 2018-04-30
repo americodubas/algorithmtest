@@ -18,12 +18,4 @@ class FindClosestPointToOrigin {
 
         return list;
     }
-
-    /**
-     * PYTHAGOREAN THEOREM
-     * To calculate the distance of x and y to origin [0, 0]
-     */
-    static double calculateDistance(int x, int y) {
-        return Math.sqrt( Math.pow(x, 2) + Math.pow(y, 2) );
-    }
 }

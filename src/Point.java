@@ -6,7 +6,15 @@ public class Point implements Comparable<Point> {
     Point(int x, int y) {
         this.x = x;
         this.y = y;
-        this.distance = FindClosestPointToOrigin.calculateDistance(x, y);
+        this.distance = calculateDistance(x, y);
+    }
+
+    /**
+     * PYTHAGOREAN THEOREM
+     * To calculate the distance of x and y to origin [0, 0]
+     */
+    static double calculateDistance(int x, int y) {
+        return Math.sqrt( Math.pow(x, 2) + Math.pow(y, 2) );
     }
 
     @Override
