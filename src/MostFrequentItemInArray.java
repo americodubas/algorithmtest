@@ -10,6 +10,11 @@ import java.util.HashMap;
 class MostFrequentItemInArray {
 
     static Pair<Integer, Integer> find(int[] given) {
+
+        if (given == null || given.length == 0) {
+            return null;
+        }
+
         HashMap<Integer, Integer> count = new HashMap<>();
         int maxCount = 0;
         int currentCount;
@@ -18,13 +23,14 @@ class MostFrequentItemInArray {
         for (int i : given) {
 
             if (!count.containsKey(i)) {
-                count.put(i, 1);
-                continue;
+                currentCount = 1;
+            } else {
+                currentCount = count.get(i);
+                currentCount++;
             }
 
-            currentCount = count.get(i);
-            currentCount++;
             count.put(i, currentCount);
+
             if (currentCount > maxCount) {
                 maxCount = currentCount;
                 mostFrequent = i;
