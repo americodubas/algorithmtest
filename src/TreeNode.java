@@ -10,4 +10,11 @@ class TreeNode {
         this.right = right;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof TreeNode){
+            return this.value == ((TreeNode) obj).value;
+        }
+        return false;
+    }
 }
