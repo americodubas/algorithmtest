@@ -24,6 +24,7 @@ public class MineSweeperExpandTest {
     @Test
     public void field1ClickOnNumber() {
         assertArrayEquals(field1, MineSweeperExpand.click(field1, 2, 2));
+        assertArrayEquals(field1, MineSweeperExpand.clickWithQueue(field1, 2, 2));
     }
 
     @Test
@@ -32,11 +33,13 @@ public class MineSweeperExpandTest {
                 {-2, 1, 1, 1, -2},
                 {-2, 1, -1, 1, -2}};
         assertArrayEquals(result, MineSweeperExpand.click(field1, 1, 4));
+        assertArrayEquals(result, MineSweeperExpand.clickWithQueue(field1, 1, 4));
     }
 
     @Test
     public void field2ClickOnBomb() {
         assertArrayEquals(field2, MineSweeperExpand.click(field2, 0,0));
+        assertArrayEquals(field2, MineSweeperExpand.clickWithQueue(field2, 0,0));
     }
 
     @Test
@@ -48,5 +51,6 @@ public class MineSweeperExpandTest {
                 {-2, -2, 1, -1}
         };
         assertArrayEquals(result, MineSweeperExpand.click(field2, 1,3));
+        assertArrayEquals(result, MineSweeperExpand.clickWithQueue(field2, 1,3));
     }
 }
